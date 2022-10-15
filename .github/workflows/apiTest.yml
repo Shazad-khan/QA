@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@4.0.0
+      uses: actions/checkout@4
 
     - name: API tests
       uses: Shazad-Khan/QA@master
