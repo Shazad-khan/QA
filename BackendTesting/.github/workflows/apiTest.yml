@@ -1,0 +1,19 @@
+name: api tests
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2.0.0
+
+    - name: API tests
+      uses: Shazad-Khan/QA@master
+      with:
+        url: https://tms-api.tms.imerit-playground.io/api/v1/
+        tests: |
+          BackendTesting/src/test/java/TMS/Feature/opportunitiesList.feature
